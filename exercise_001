@@ -1,6 +1,6 @@
 # _*_ coding:utf-8 _*_
 # 将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。
-# 生成的图片将出现在你程序运行的同一目录
+# 生成的图片将出现在你程序运行的同一目录， 可以尝试将图片保存在其他目录
 # python3 需要安装pillow(pip install pillow)
 from PIL import Image, ImageFont, ImageDraw
 
