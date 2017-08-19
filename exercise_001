@@ -1,15 +1,21 @@
-# 引入Pillow
-from PIL import Image, ImageDraw, ImageFont, ImageColor
-def add_num(img):
-    # 创建一个Draw对象
-    draw = ImageDraw.Draw(img)
-    # 创建一个 Font
-    myfont = ImageFont.truetype('C:/windows/fonts/Arial.ttf', size=40)
-    fillcolor = ImageColor.colormap.get('red')
-    width, height = img.size
-    draw.text((width-30, 0), '1', font=myfont, fill=fillcolor)
-    img.save('result.jpg', 'jpeg')
-    return 0
+# _*_ coding:utf-8 _*_
+# 将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。
+# 生成的图片将出现在你程序运行的同一目录
+# python3 需要安装pillow(pip install pillow)
+from PIL import Image, ImageFont, ImageDraw
+
+
+def add_num(fpath, num='2'):
+    image = Image.open(fpath)
+    w, h = image.size
+    fillcolor = '#ff0000'
+    font = ImageFont.truetype('C:/Windows/Fonts/ARIALUNI.TTF', size=100)
+    draw = ImageDraw.Draw(image)
+    draw.text((-20, 50), num, font=font, fill=fillcolor)
+    new_name = '哈哈new_' + fpath.split('/')[-1]
+    image.save(new_name, 'jpeg')
+
 if __name__ == '__main__':
-    image = Image.open('test.jpg')
-    add_num(image)
+    number = 1
+    fpath = 'C:/Users/Cao Kangkang/Desktop/exercise/20170819105136.jpg'
+    add_num(fpath, str(number))
