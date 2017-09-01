@@ -1,6 +1,8 @@
 # Everyday_exericse
 每天做一个python小练习， 代码基于python3.6
 来自 https://github.com/Show-Me-the-Code/show-me-the-code   非常感谢！！！
+
+
 **第 0000 题：**将你的 QQ 头像（或者微博头像）右上角加上红色的数字，类似于微信未读信息数量那种提示效果。 类似于图中效果
 
 头像
